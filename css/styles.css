@@ -6,15 +6,18 @@
 
 body{
   font-family: 'Anton', sans-serif;
+  background-color: #1F1F1F
+  margin: 0px;
+
 }
 
 h1{
-  color:#610000;
+  color: darkgrey;
   font-size: 72px;
 }
 
 p{
-  color:#5E0532;
+  color: grey;
   font-size: 36px;
 }
 
@@ -26,5 +29,16 @@ p{
 
 .nav-link{
   text-decoration: none;
-  color: #5E0532;
+  color: darkgrey;
+}
+
+.nav{
+  margin: 0px 0px 0px 0px;
+  padding: 0px;
+  background-color: grey;
+}
+
+.nav-container{
+  margin: 0px;
+  padding: 0px;
 }
