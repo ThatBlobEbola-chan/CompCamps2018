@@ -1,3 +1,37 @@
+@keyframes banner {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-webkit-keyframes banner {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@keyframes text {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+@-webkit-keyframes text {
+  from{opacity: 0;}
+  to{opacity: 1;}
+}
+
+.banner{
+  animation-name: banner;
+  -webkit-animation-name: banner;
+  animation-duration: 5s;
+  -webkit-animation-duration: 5s;
+}
+
+.text{
+  animation-name: text;
+  -webkit-animation-name: text;
+  animation-duration: 15s;
+  -webkit-animation-duration: 15s;
+}
+
 .center{
   text-align: center;
   display: block;
@@ -6,9 +40,8 @@
 
 body{
   font-family: 'Anton', sans-serif;
-  background-color: #1F1F1F
+  background-color: #1F1F1F;
   margin: 0px;
-
 }
 
 h1{
