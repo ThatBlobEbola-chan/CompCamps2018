@@ -1,62 +1,24 @@
-import random
-import sys
+import os, pygame
 
-name = input("Whomstve dost thou be of Kickstart? (Hint, your name is Tiger.): ")
-health = 40
-score = 0
+from settings import Settings
 
-class sodieboi:
-    """Sodiebois - The Rogue Gods"""
-    def __init__(self, name):
-        self.name = name
+class Game():
+	def __init__(self):
+		pass
 
-    @property
-    def damage(self):
-        return random.randint(1,5)
+	def loop(self, screen):
+		clock = pygame.time.Clock()
 
-    def isAlive(self):
-        return self.health > 0
+		while True:
+			delta_t = clock.tick(Settings.frameRate)
 
-    def attack(self):
-        damage = random.randint(0, 10)
-        self.health -= damage
-        return damage
+			for event in pygame.event.get():
+				if event.type == pygame.QUIT:
+					return
 
-sodiebois = [
-    sodieboi("Ebola"),
-    sodieboi("Ryan"),
-    sodieboi("Colton"),
-    sodieboi("Dalton"),
-    sodieboi("Actual Coke Bottle"),
-    sodieboi("Subway Management")
-]
+			screen.fill((0, 0, 0))
 
-random.shuffle(sodiebois)
+			pygame.display.update()
 
-
-while len(sodiebois) > 1:
-    sodieboi = sodiebois.pop()
-    print("The Sodieboi {} approaches.".format(sodieboi.name))
-    while sodieboi.isAlive():
-        print("Tiger has {}HP!".format(health))
-        print("Do you want to bone or bolt?")
-        if input("Bone / Bolt > ").lower() == "bone":
-            damage = sodieboi.attack()
-            score += damage
-            print("Tiger did {}HP in attack! THATSA LOTTA DAMAGE!".format(damage))
-            if sodieboi.isAlive():
-                damage = sodieboi.damage
-                health -= damage
-                print("Tiger took {}HP in damage!".format(sodieboi.damage))
-        else:
-            bamboozled = random.randint(1,5) == 1
-            if not bamboozled:
-                print("Tiger ran away like the... tiger he is.")
-                print("Your score was {}".format(score))
-                sys.exit(0)
-            else:
-                print("Can't escape!")
-
-print("Wowza, Tiger killed everyone.")
-print("Epic sick nasty.")
-print("Your Score: {}".format(score))
+	def quit(self):
+		pass
