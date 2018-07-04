@@ -4,7 +4,11 @@ from settings import Settings
 
 class Game():
 	def __init__(self):
-		pass
+		self.background = pygame.image.load("images/bliss.jpg")
+
+		self.godjavins = [
+			godjavin("GodJavin")
+		]
 
 	def loop(self, screen):
 		clock = pygame.time.Clock()
@@ -17,8 +21,9 @@ class Game():
 					return
 
 			screen.fill((0, 0, 0))
+			screen.blit(self.background, (0,0))
 
-			pygame.display.update()
+			pygame.display.flip()
 
 	def quit(self):
 		pass

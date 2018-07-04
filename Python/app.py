@@ -3,8 +3,8 @@ from pygame.locals import *
 from settings import Settings
 from game import Game
 
-if not pygame.font: print 'Warning, fonts disabled'
-if not pygame.mixer: print 'Warning, sound disabled'
+if not pygame.font: print ('Warning, fonts disabled')
+if not pygame.mixer: print ('Warning, sound disabled')
 
 def main():
 

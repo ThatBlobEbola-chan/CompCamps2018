@@ -1,5 +1,5 @@
 class Settings:
-	title	      = "Hello PyGame"
+	title	      = "Godjavin"
 	width         = 800
 	height 	      = 600
 	resourcePath  = 'assets'
