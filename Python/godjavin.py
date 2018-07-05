@@ -6,3 +6,4 @@ class godjavin:
         self.image = "images/" + self.name.lower() + ".png"
         self.img = pygame.image.load(self.image)
         self.img = pygame.transform.scale(self.img, (800, 600))
+        self.health = 20

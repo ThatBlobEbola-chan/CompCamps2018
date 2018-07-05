@@ -9,6 +9,7 @@ if not pygame.mixer: print ('Warning, sound disabled')
 def main():
 
 	pygame.init()
+	pygame.font.init()
 	screen = pygame.display.set_mode((Settings.width, Settings.height))
 	pygame.display.set_caption(Settings.title)
 
